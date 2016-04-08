@@ -1,0 +1,27 @@
+<h3>Pets</h3>
+
+<a href="#/pet" class="btn btn-primary pull-xs-right m-b-1">New Pet</a>
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Category</th>
+      <th>Edit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="#pet of pets">
+      <td>{{pet.id}}</td>
+      <td>{{pet.name}}</td>
+      <td>{{pet.age}}</td>
+      <td>{{pet.category.name}}</td>
+      <td><a href='#/pet/{{pet.id}}'>Edit</a></td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
